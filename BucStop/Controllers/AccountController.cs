@@ -25,6 +25,7 @@ namespace BucStop.Controllers
                 // If authentication is successful, create a ClaimsPrincipal and sign in the user
                 var claims = new[]
                 {
+                    ffapi.adduser(email);
                     new Claim(ClaimTypes.Name, email),
                     new Claim(ClaimTypes.NameIdentifier, "user_id"),
                 };
